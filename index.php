@@ -5,7 +5,7 @@
   Description: Plugin to users be able to submit a wish to the wishing tree
   Version: 1.0
   Author: Ludwing Laguna
-  Author URI: https://github.com/LearnWebCode
+  Author URI: https://github.com/lagunal
 */
 
 if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -96,10 +96,8 @@ class WishingTree {
   }
 
   function renderCallback($attributes) {
-    if (!is_admin()) {
       wp_enqueue_script('wishingFrontendScript', plugin_dir_url(__FILE__) . 'build/frontend.js', array('wp-element'));
       wp_enqueue_style('wishingFrontendStyles', plugin_dir_url(__FILE__) . 'build/frontend.css');
-    }
 
     ob_start(); ?>
     <div class="boilerplate-update-me"><pre style="display: none;"><?php echo wp_json_encode($attributes) ?></pre></div>

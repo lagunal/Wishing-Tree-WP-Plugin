@@ -19,6 +19,7 @@ function EditComponent(props) {
   
   function updateUrl(e) {
     props.setAttributes({ url: e.target.value })
+    console.log('url', e.target.value);
   }
 
   return (
