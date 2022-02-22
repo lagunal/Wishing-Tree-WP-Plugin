@@ -28,7 +28,7 @@ function WishingTree(props) {
     }
     axios.post(`${props.url}/wp-json/jwt-auth/v1/token`, loginData)
       .then(res => {
-        console.log(res.data)
+        //console.log(res.data)
         setToken(res.data.token)
       })
       .catch(err => {
@@ -77,13 +77,22 @@ function WishingTree(props) {
       </p>
           <p className="error-message container-title"><h1>{message}</h1></p>
       <p>
-        <input type="text" placeholder="Type Title of your wish..." required disabled={saveWish} onChange={(e) => setTitle(e.target.value)}/>
+        <label className="label-wish">
+          Type your wish title
+          <input type="text" className="wish-input" placeholder="Type Title of your wish..." required disabled={saveWish} onChange={(e) => setTitle(e.target.value)}/>
+        </label>
       </p>
       <p>
-        <textarea placeholder="Type your wish..." required rows="4" disabled={saveWish} onChange={(e) => setWish(e.target.value)} /> 
+        <label className="label-wish">
+          Type your wish
+          <textarea className="wish-input" placeholder="Type your wish..." required rows="2" disabled={saveWish} onChange={(e) => setWish(e.target.value)} /> 
+        </label>
       </p>
       <p>
-        <input type="email" placeholder="Type your email (optional)..." disabled={saveWish} onChange={(e) => setEmail(e.target.value)} />
+        <label className="label-wish">
+          Type your email (optional)
+          <input className="wish-input" type="email" placeholder="Type your email (optional)..." disabled={saveWish} onChange={(e) => setEmail(e.target.value)} />
+        </label>
       </p>
       <p className="buttonAlign">
         <button className="fontButton" type="submit">Put your wish on the tree</button>

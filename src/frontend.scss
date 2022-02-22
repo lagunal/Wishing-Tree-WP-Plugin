@@ -18,7 +18,7 @@
   background-image: url('./images/Wish–Tree_Rev.jpg');
   height: 410px;
   background-repeat: no-repeat;
-  background-position: 40% 0;
+  background-position: 50% 0;
 }
 
 .tree-animation {
@@ -26,7 +26,7 @@
   background-image: url('./images/Wish–Tree_May.gif');
   height: 410px;
   background-repeat: no-repeat;
-  background-position: 40% 0;
+  background-position: 50% 0;
 }
 
 .container-title {
@@ -44,8 +44,21 @@
 
 .fontButton {
   font-size: 20px;
+  margin-top: 10px;
 }
 
 .buttonAlign {
   text-align: center;
+}
+
+.wish-input {
+  border: 3px solid black !important;
+  border-radius: 6px !important;
+  color: #000 !important;
+  // margin: 5px;
+}
+
+.label-wish {
+  color: #000;
+  font-size: 20px;
 }
